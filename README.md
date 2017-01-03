@@ -1,2 +1,2 @@
 # simstems.github.io
-A site for my projects. 
+A personal website to showcase my projects. 
