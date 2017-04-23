@@ -117,9 +117,38 @@ textarea.mail-input {
     margin-top: 6%;
     margin-bottom: 6%;
 }
-.feed-row.feedburnerFeedBlock li{
+.feed-row .feedburnerFeedBlock li, p, div{
     color: #242d34 !important;
     text-decoration: none;
+    list-style-type: none;
+}
+.feed-row .feedburnerFeedBlock p.feedTitle a {
+    color: #242d34 !important;
+    font-family: 'Heebo', sans-serif;
+}
+.feed-row .feedburnerFeedBlock li span.headline a {
+    color: #242d34 !important;
+}
+.feed-row .feedburnerFeedBlock li span.headline {
+    font-family: 'Heebo', sans-serif;
+}
+.feed-row .feedburnerFeedBlock li p.date{
+    font-size: 75%;
+    color: grey !important;
+    font-family: 'Glegoo', serif;
+}
+.feed-row .feedburnerFeedBlock li div {
+    font-family: 'Glegoo', serif;
+}
+.feed-row .feedburnerFeedBlock li {
+    border-radius: 2px;
+    margin-bottom: 4px;
+    padding: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
+    transition: box-shadow 0.2s ease-in-out;
+}
+.feed-row .feedburnerFeedBlock li:hover {
+    box-shadow: 0 10px 18px rgba(0,0,0,.26);
 }
 .feed-row #creditfooter {
     display: none;
