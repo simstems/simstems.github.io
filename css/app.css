@@ -112,4 +112,16 @@ textarea.mail-input {
     cursor: pointer;
     float: right;
 }
+/* feed design settings (index.html)*/
+.feed-row {
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+.feed-row.feedburnerFeedBlock li{
+    color: #242d34 !important;
+    text-decoration: none;
+}
+.feed-row #creditfooter {
+    display: none;
+}
 /* the about design settings (about.html)*/
