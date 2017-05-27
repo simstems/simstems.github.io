@@ -28,7 +28,7 @@
   background:rgba(0, 0, 0, 0.5) !important;
 }
 #overlay-icon {
-  background-image: url(../img/logo.png);
+  background-image: url('../img/logo.png');
   background-repeat: no-repeat;
   background-size: contain;
   height: 6rem;
@@ -154,3 +154,42 @@ textarea.mail-input {
     display: none;
 }
 /* the about design settings (about.html)*/
+.stephen {
+    margin-top: 6%;
+}
+.stephen .contact.row {
+    padding-right: .9375rem;
+    padding-left: .9375rem;
+}
+.stephen .abt_contact_container{
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+    width: 50%;
+    float: right;
+}
+.stephen .social ul {
+    display: -webkit-inline-box;
+}
+.stephen b {
+    color: #020706;
+    font-size:84%;
+}
+.bg-twitter, .bg-linkedin, .bg-github {
+  background-image: url('../img/css_sprites.png');
+  background-repeat: no-repeat;
+}
+.bg-twitter {
+    width: 48px; 
+    height: 48px;
+    background-position: -8px -8px;
+}
+.bg-linkedin {
+    width: 48px;
+    height: 48px;
+    background-position: -72px -8px;
+}
+.bg-github {
+    width: 48px;
+    height: 48px;
+    background-position: -136px -8px;
+}
