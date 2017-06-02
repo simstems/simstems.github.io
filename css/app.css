@@ -168,7 +168,7 @@ textarea.mail-input {
     float: right;
 }
 .stephen .social ul {
-    display: -webkit-inline-box;
+    display: inline-flex;
 }
 .stephen b {
     color: #020706;
