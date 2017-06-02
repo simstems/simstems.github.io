@@ -6,13 +6,9 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SIMSTEMS</title>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<!-- Compressed CSS -->
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-	rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="css/app.css">
 <link rel="stylesheet" href="css/search.css">
 </head>
@@ -33,8 +29,7 @@
 					<button type="button" id="search-button" class="button">
 						<i class="material-icons">search</i>
 					</button>
-					<input type="text" id="search-bar" class="search-input"
-						placeholder="Search" name="q" autocomplete="off">
+					<input type="text" id="search-bar" class="search-input" placeholder="Search" name="q" autocomplete="off">
 					<button type="button" id="srch-close-btn" class="button">
 						<i class="material-icons">close</i>
 					</button>
@@ -44,12 +39,10 @@
 	</div>
 	<!-- Off Canvas Menu -->
 	<div class="off-canvas-wrapper">
-		<div class="off-canvas position-left main-color"
-			data-transition="overlap" id="offCanvas" data-off-canvas>
+		<div class="off-canvas position-left main-color" data-transition="overlap" id="offCanvas" data-off-canvas>
 			<ul class="vertical menu no-bullet">
 				<li><a href="index.html" id="overlay-icon"></a></li>
-				<li><a href="http://blog.simstems.com"><i
-						class="material-icons">message</i>BLOG</a></li>
+				<li><a href="http://blog.simstems.com"><i class="material-icons">message</i>BLOG</a></li>
 				<li><a href="projects.html"><i class="material-icons">build</i>PROJECTS</a></li>
 				<li><a href="apps.html"><i class="material-icons">apps</i>APPS</a></li>
 				<li><a href="about.html"><i class="material-icons">info</i>ABOUT</a></li>
@@ -62,23 +55,17 @@
 		<!-- Your page content lives here -->
 		<div class="row mail-row">
 			<div class="medium-6 medium-centered columns">
-				<form method="POST"
-					action="https://formspree.io/contact@simstems.com"
-					class="mail-form">
-					<input type="email" name="email" placeholder="Your email"
-						class="mail-input"> <input type="text" name="subject"
-						placeholder="Subject" class="mail-input">
-					<textarea name="message" placeholder="Your message"
-						class="mail-input"></textarea>
-					<button type="submit" class="mail-button main-color">Send</button>
+				<form method="" name="formspree" action="" class="mail-form">
+					<input type="email" name="email" placeholder="Your email" class="email mail-input" required> 
+                    <input type="text" name="subject" placeholder="Subject" class="subject mail-input" required>
+					<textarea name="message" placeholder="Your message" class="message mail-input" required></textarea>
+					<button type="submit" onclick="return verify()" class="mail-button main-color">Send</button>
 				</form>
 			</div>
 		</div>
 	</div>
 	<script src="js/vendor/what-input.js"></script>
-	<!-- Compressed JavaScript -->
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/search.js"></script>
 </body>
