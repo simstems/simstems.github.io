@@ -275,6 +275,7 @@ footer .footer-link-column {
     footer #social-media-icons {
         text-align: center;
         text-align: -moz-center;
+        text-align: -webkit-center;
     }
 }
 @media screen and (max-width: 580px) {
@@ -309,6 +310,17 @@ footer .footer-link-column {
         left: 2.8rem;
     }
 }
+@media screen and (max-width: 600px) {
+    .pricing-table .cta-button {
+        display:block;
+        margin-top: 2rem;
+        text-align: center;
+        list-style: none;
+    }
+    .button-row .button-table .cta-button {
+        display: none;
+    }
+}
 @media screen and (max-width: 800px) {
     .top-bar {
         position: fixed;
@@ -325,6 +337,7 @@ footer .footer-link-column {
         width: 100%;
         text-align: center;
         text-align: -moz-center;
+        text-align: -webkit-center;
     }
     .top-bar {
         position: fixed;
