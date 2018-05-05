@@ -1,71 +1,69 @@
 $(document).foundation();
-$(document).ready(function(){
-    // For about.html
-    if($(window).innerWidth() <= 751) {
-       $(".stephen .contact").removeClass("abt_contact_container"); 
-       $(".stephen .contact").addClass("row"); 
-       $(".stephen .contact .mailing").addClass("medium-6 columns"); 
-       $(".stephen .contact .social").addClass("medium-6 columns");
-    }else{
-       $(".stephen .contact").addClass("abt_contact_container"); 
-       $(".stephen .contact").removeClass("row"); 
-       $(".stephen .contact .mailing").removeClass("medium-6 columns"); 
-       $(".stephen .contact .social").removeClass("medium-6 columns"); 
-    }
-});
-// For contact.html
-function verify() {
-    
-    function send(){
-        document.formspree.method ="POST";
-        document.formspree.action ="https://formspree.io/contact@simstems.com";
-        return true;
-    }
-
-    var errorBackground = '#fb7e7e', correctBackground = '#fff';
-    
-    $(".mail-button").focus(function(){
-        if ((document.formspree.email.value == "") && (document.formspree.subject.value == "") && (document.formspree.message.value == "")) {
-            $('.mail-form .email').css('background-color', errorBackground);
-            $('.mail-form .subject').css('background-color', errorBackground);
-            $('.mail-form .message').css('background-color', errorBackground);
-        }
-        else if ((document.formspree.email.value == "") && (document.formspree.subject.value == "")) {
-            $('.mail-form .email').css('background-color', errorBackground);
-            $('.mail-form .subject').css('background-color', errorBackground);
-            $('.mail-form .message').css('background-color', correctBackground);
-        }
-        else if ((document.formspree.email.value == "") && (document.formspree.message.value == "")) {
-            $('.mail-form .email').css('background-color', errorBackground);
-            $('.mail-form .message').css('background-color', errorBackground);
-            $('.mail-form .subject').css('background-color', correctBackground);
-        }
-        else if ((document.formspree.subject.value == "") && (document.formspree.message.value == "")) {
-            $('.mail-form .subject').css('background-color', errorBackground);
-            $('.mail-form .message').css('background-color', errorBackground);
-            $('.mail-form .email').css('background-color', correctBackground);
-        }
-        else if (document.formspree.message.value == "") {
-            $('.mail-form .message').css('background-color', errorBackground);
-            $('.mail-form .email').css('background-color', correctBackground);
-            $('.mail-form .subject').css('background-color', correctBackground);
-        }
-        else if (document.formspree.subject.value == "") {
-            $('.mail-form .subject').css('background-color', errorBackground);
-             $('.mail-form .email').css('background-color', correctBackground);
-            $('.mail-form .message').css('background-color', correctBackground);
-        }
-        else if (document.formspree.email.value == "") {
-            $('.mail-form .email').css('background-color', errorBackground);
-             $('.mail-form .subject').css('background-color', correctBackground);
-            $('.mail-form .message').css('background-color', correctBackground);
-        }
-        else {
-            $('.mail-form .email').css('background-color', correctBackground);
-            $('.mail-form .subject').css('background-color', correctBackground);
-            $('.mail-form .message').css('background-color', correctBackground);
-        }
-    });
-    return send();
+function getiFrameForm(){
+    var iFrameForm = $('iframe').contents().find('.mail-form');
+    return iFrameForm;
 }
-verify();
+function getiFrameFormSubject(){
+    var iFrameFormSubject = $('iframe').contents().find('#form-subject');
+    return iFrameFormSubject;
+}
+function scrollDown(){
+    $('html, body').animate({scrollTop: $(document).height()}, 'slow');
+    return false;
+}    
+$(document).ready(function(){
+    $('.image-slider').slick({
+        arrows:true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        slidesToShow: 1,
+    });
+    $("#contact-hdr, #contact-lnk, .get-quote-support, .get-quote-consult, .get-quote-web").click(function(){
+        $("#about-title").removeClass("selected");
+        $(".about-row").fadeOut(1000, function(){
+            $("#contact-title").addClass("selected");
+            $(".mail-row").fadeIn(500)
+        });
+        scrollDown();
+    });
+    $("#about-hdr, #about-lnk").click(function(){
+        $("#contact-title").removeClass("selected");
+        $(".mail-row").fadeOut(1000, function(){
+            $("#about-title").addClass("selected");
+            $(".about-row").fadeIn(500)
+        });
+        scrollDown();
+    });
+    $(".get-quote-support").click(function(){
+        var iFrameForm = getiFrameForm();
+        var iFrameFormSubject = getiFrameFormSubject();
+        iFrameFormSubject.val("Tech Support");
+        iFrameFormSubject.attr('readonly', true);
+        iFrameForm.attr('action', 'https://formspree.io/techsupport@simstems.com');
+        scrollDown();
+    }); 
+    $(".get-quote-consult").click(function(){
+        var iFrameForm = getiFrameForm();
+        var iFrameFormSubject = getiFrameFormSubject();
+        iFrameFormSubject.val("Consultation");
+        iFrameFormSubject.attr('readonly', true);
+        iFrameForm.attr('action', 'https://formspree.io/consultation@simstems.com');
+        scrollDown();
+    }); 
+    $(".get-quote-web").click(function(){
+        var iFrameForm = getiFrameForm();
+        var iFrameFormSubject = getiFrameFormSubject();
+        iFrameFormSubject.val("Web Design");
+        iFrameFormSubject.attr('readonly', true);
+        iFrameForm.attr('action', 'https://formspree.io/webdesign@simstems.com');
+        scrollDown();
+    });
+    var RefreshButton = $('iframe').contents().find('.refresh');
+    RefreshButton.click(function(){
+        var iFrameForm = getiFrameForm();
+        var iFrameFormSubject = getiFrameFormSubject();
+        iFrameFormSubject.attr('readonly', false);
+        iFrameForm.attr('action', 'https://formspree.io/contact@simstems.com');
+    });
+});
+

@@ -1,101 +1,141 @@
-* {
-  color: #f0f8ff;
+.hidden {
+    display: none;
+}
+.selected {
+    text-decoration: underline solid #d8eefa;
+}
+body, .top-bar, .top-bar ul, .off-canvas-menu { 
+    background: #33cccc;
+}
+.top-bar a, a:hover {
+    color: #ecf0f1;
+}
+.button {
+    list-style: none;
+    border-radius: 4px;
+    background: #2980b9;
 }
 .top-bar {
-  box-shadow: 0 2px 5px rgba(0,0,0,.26);
-  height: 62px;
+    position:relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
+    height: 54px;
+    z-index: 2;
 }
-.main-color {
-  background: rgb(46, 158, 138);
+.top-bar .top-bar-right button {
+    display: none;
 }
-.menu-button {
-  position: absolute;
-  left: 12px;
-  top: 8px;
-  color: #f0f8ff;
-  background: 0;
-  cursor: pointer;
+.brand-logo {
+    width: 175px; height: 35px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../img/sim-logo.png');
 }
-.menu-button.button:hover {
-    background-color: transparent !important;
-}
-#search-bar, input.search-input, #srch-close-btn, #search-button, .menu-button {
-    margin: 0 auto;
-    padding: 0;
-    line-height: 4;
-}
-.js-off-canvas-overlay {
-  background:rgba(0, 0, 0, 0.5) !important;
-}
-#overlay-icon {
-  background-image: url('../img/logo.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 6rem;
-}
-
-ul.menu li,a { 
-  outline: 0;
-  box-shadow: none;
-  
-}
-.off-canvas li {
-  color:#f0f8ff;
-}
-.off-canvas a {
-  color:#f0f8ff;
-} 
-.off-canvas a:hover {
-  color:#f0f8ff;
-} 
-.off-canvas a:visited {
-  color:#f0f8ff;
-}
-
-/* off-canvas-content grid system settings (apps.html & projects.html)*/
-.thumb {
-    position: relative;
-}
-.thumb-row {
-    margin-top: 42px;
-}
-.thumb-title {
-    color: #444;
+.main-content h2, h1 {
     text-align: center;
-    position: absolute;
-    top: 16%;
-    left: 0.5%;
-    font-weight: 700;
-    font-size: 100%;
-    text-decoration: underline;
-    width: 100%;
+    color:#ecf0f1;
 }
-.view-btn {
-    font-family: "Noto Sans",sans-serif;
-    font-size: 1.249rem;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 4px;
-    line-height: 2.20rem;
-    margin: 0;
-    width: 42%;
-    opacity: .8;
+#services, #about-hdr, #contact-hdr {
+    background: #2c3e50;
+}
+/* -------- TEMPORARY CODE START ------- */
+.services-row {
+    width: 1000px;
+    height: 342px;
+    background: no-repeat center/100% url('../img/services-overlay.png') !important;
+}
+.services-row .columns, .button-row {
+    display: none !important;
+}
+/* -------- TEMPORARY CODE END ------- */
+#services {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.pricing-table .cta-button {
+    display: none;
+}
+.services-row .pricing-table {
+    margin-top: 1rem;
+}
+.services-row .pricing-table .title {
+    text-align: center;
+    font-weight: bold;
+    list-style: none;
+}
+.services-row .pricing-table .description {
+    margin-top: 2rem;
+}
+.button-row .button-table .cta-button {
+    text-align: center;
+    list-style: none;
+}
+#contact-title, #about-title {
     cursor: pointer;
-    position: absolute;
-    margin: 0 auto;
-    padding: 0;
-    top: 62%;
-    left: 29%;
 }
-/* mail form design settings (contact.html)*/
+.about-row, .services-row, .mail-row, .about-mail-container {
+    background: #ecf0f1;
+}
 .mail-row {
-    margin-top: 6%;
+     background: no-repeat center/100% url('../img/contact-bg.png');
+}
+.main-content-iframe .mail-container{
+     background: transparent !important;
+}
+.main-content-iframe .mail-row{
+     background: none!important;
+}
+.about-row {
+     background: no-repeat center/100% url('../img/about-bg.png');
+}
+.about-row .intro-text p {
+    text-indent: 5%;
+}
+.intro-text .portrait{
+    display: none;
+}
+.about-row #resume-row {
+    text-align: center !important;
+}
+.portrait {
+    border-radius: 3px;
+    margin-top: 2%;
+}
+/* FOOTER START */
+footer {
+    width: 100%;
+    height: 6rem;
+}
+footer, footer ul {
+    background: #2c3e50 !important;
+}
+footer a {
+    color: #ecf0f1 !important;
+}
+.bottom-bar {
+    position:relative;
+    top: 29%
+}
+#about-intro-container {
+    margin-top: 4%;
+}
+/* START mail form design settings (contact.html)*/
+#mail-iframe-containter {
+    height: 34rem;
+}
+iframe {
+    width: 100%; 
+    height: 100%;
+    border: 0;
+    overflow: hidden;
+    position: relative;
+    
 }
 .mail-form {
+    margin-top: 6%;
     width: 100%
 }
 .mail-input {
-    
+    border-radius: 3px;
 }
 textarea.mail-input {
     height: 20rem;
@@ -112,87 +152,248 @@ textarea.mail-input {
     cursor: pointer;
     float: right;
 }
-/* feed design settings (index.html)*/
-.feed-row {
-    margin-top: 6%;
-    margin-bottom: 6%;
+/* END mail form design settings (contact.html)*/
+footer .footer-brand-column {
+    position: relative;
+    top: 0.5rem;
 }
-.feed-row .feedburnerFeedBlock li, p, div{
-    color: #242d34 !important;
-    text-decoration: none;
-    list-style-type: none;
+footer .footer-link-column {
+    position: relative;
+    top: 0.8rem;
 }
-.feed-row .feedburnerFeedBlock p.feedTitle a {
-    color: #242d34 !important;
-    font-family: 'Heebo', sans-serif;
+/* APP ICONS START */
+.bg-GitHub_120px {
+    width: 48px; height: 48px;
+    background: no-repeat center/80% url('../img/icons/GitHub-120px.png');
 }
-.feed-row .feedburnerFeedBlock li span.headline a {
-    color: #242d34 !important;
+.bg-Google_play_badge {
+    width: 646px; height: 250px;
+    background: url('../img/icons/Google-play-badge.png');
 }
-.feed-row .feedburnerFeedBlock li span.headline {
-    font-family: 'Heebo', sans-serif;
+.bg-Instagram_128px {
+    width: 48px; height: 48px;
+    background: no-repeat center/100% url('../img/icons/Instagram-128px.png');
 }
-.feed-row .feedburnerFeedBlock li p.date{
-    font-size: 75%;
-    color: grey !important;
-    font-family: 'Glegoo', serif;
+.bg-LinkedIn_128px_R {
+    width: 48px; height: 48px;
+    background: no-repeat center/78% url('../img/icons/LinkedIn-128px-R.png');
 }
-.feed-row .feedburnerFeedBlock li div {
-    font-family: 'Glegoo', serif;
+.bg-Sketchfab_128px {
+    width: 48px; height: 48px;
+    background: no-repeat center/80% url('../img/icons/Sketchfab_128px.png');
 }
-.feed-row .feedburnerFeedBlock li {
-    border-radius: 2px;
-    margin-bottom: 4px;
-    padding: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,.26);
-    transition: box-shadow 0.2s ease-in-out;
+.bg-Twitter_128px {
+    width: 48px; height: 48px;
+    background: no-repeat center/72% url('../img/icons/Twitter-128px.png');
 }
-.feed-row .feedburnerFeedBlock li:hover {
-    box-shadow: 0 10px 18px rgba(0,0,0,.26);
+/* APP ICONS END */
+/*//---------------------------------------------------------------------------------------//*/
+ /* MOBILE SETTINGS START */
+@media screen and (max-width: 350px) {
+     .off-canvas {
+        width: 35%;
+        background-color: #33cccc !important;
+        background: no-repeat center/100% url('../img/mobile-menu-bg.png');
+    }
 }
-.feed-row #creditfooter {
-    display: none;
+@media screen and (max-width: 500px) {
+    .top-bar {
+        position: fixed;
+        width: 100%;
+        z-index: 12;
+    }
+    .top-bar .top-bar-left, .top-bar .top-bar-right {
+        width: 50% !important;
+    }
+    .top-bar-right .menu {
+        display: none;
+    }
+    .top-bar .top-bar-right button {
+        background: #33cccc;
+        position: relative;
+        bottom: 5px;
+        height: 46px;
+        display: block;
+        float: right;
+    }
+    .menu-button.button:hover {
+        background-color: transparent !important;
+    }
+    ul.menu li,a { 
+      outline: 0;
+      box-shadow: none;
+    }
+    #offCanvas ul {
+       margin-top: 4rem;
+    }
+    .off-canvas {
+        width: 35%;
+        background-color: #33cccc !important;
+        background: no-repeat center/100% url('../img/mobile-menu-bg.png');
+    }
+    .off-canvas li {
+      color:#ecf0f1;
+    }
+    .off-canvas a {
+      color:#ecf0f1;
+    } 
+    .off-canvas a:hover {
+      color:#ecf0f1;
+    } 
+    .off-canvas a:visited {
+      color:#ecf0f1;
+    }
+    .js-off-canvas-overlay {
+      background:rgba(0, 0, 0, 0.5) !important;
+    }
+    .main-content #trove {
+        margin-top: 3.2rem
+    }
+    .pricing-table .cta-button {
+        display:block;
+        margin-top: 2rem;
+        text-align: center;
+        list-style: none;
+    }
+    .button-row .button-table .cta-button {
+        display: none;
+    }
+    .mail-row {
+         background: none !important;
+    }
+    .selected {
+        text-decoration:none;
+        font-size: 2rem;
+    }
+    #about-title, #contact-title {
+        transition: font-size 0.2s ease-in-out;
+    }
+    .about-row {
+         background: none !important;
+    }
+    .about-row .intro-text {
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-top: 1rem;
+    }
+    footer .brand-logo {
+        display: none !important;
+    }
+    footer .menu.simple {
+        display: none;
+    }
+    footer #social-media-icons {
+        text-align: center;
+        text-align: -moz-center;
+    }
 }
-/* the about design settings (about.html)*/
-.stephen {
-    margin-top: 6%;
+@media screen and (max-width: 580px) {
+     .pricing-table .cta-button {
+        display:block;
+        margin-top: 2rem;
+        text-align: center;
+        list-style: none;
+    }
+    .button-row .button-table .cta-button {
+        display: none;
+    }
+    .selected {
+        text-decoration:none;
+        font-size: 2rem;
+    }
+    #about-title, #contact-title {
+        transition: font-size 0.2s ease-in-out;
+    }
+    .about-row .intro-text {
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-top: 1rem;
+    }
+    .about-row .intro-text p {
+        margin-top: 1rem;
+    }
+    .intro-text .portrait{
+        display: block;
+        width: 80%;
+        position: relative;
+        left: 2.8rem;
+    }
 }
-.stephen .contact.row {
-    padding-right: .9375rem;
-    padding-left: .9375rem;
+@media screen and (max-width: 800px) {
+    .top-bar {
+        position: fixed;
+        width: 100%;
+        z-index: 12;
+    }
+    footer .brand-logo {
+        display: none !important;
+    }
+    footer .menu.simple {
+        display: none;
+    }
+    footer div:nth-child(2), #social-media-icons {
+        width: 100%;
+        text-align: center;
+        text-align: -moz-center;
+    }
+    .top-bar {
+        position: fixed;
+        width: 100%;
+        z-index: 12;
+    }
+    .top-bar .top-bar-left {
+        width: 34% !important;
+    }
+    .top-bar .top-bar-right {
+        width: 60% !important;
+    }
+    .about-row {
+         background: none !important;
+    }
+    .about-row .intro-text {
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-top: 1rem;
+    }
+    #about-intro-container > div:nth-child(1) {
+        display: none;
+    }
+    .intro-text .portrait{
+        display: block;
+        width: 80%;
+        position: relative;
+        left: 2.8rem;
+    }
+} 
+@media screen and (max-width: 1000px) {
+    .about-row {
+         background: none !important;
+    }
+    #about-intro-container > div:nth-child(1) img {
+        width: 72%;
+        position: relative;
+        left: 4.2rem;
+    }
+    .about-row .intro-text p {
+        margin-top: 1rem;
+    }
+    .menu.simple li {
+        margin-right: 0.8rem
+    }
 }
-.stephen .abt_contact_container{
-    padding-left: .9375rem;
-    padding-right: .9375rem;
-    width: 50%;
-    float: right;
+@media screen and (max-width: 1024px) {
+    .about-row {
+     background: no-repeat center/100% url('../img/about-bg-1.png');
+    }
+    footer .menu.simple {
+        font-size: 90% !important;
+    }
+    footer .bottom-bar {
+        font-size: 90% !important;
+    }
+    footer .bottom-bar, #social-media-icons {
+        position: relative;
+        bottom: 0.6rem;
+    }
 }
-.stephen .social ul {
-    display: inline-flex;
-}
-.stephen b {
-    color: #020706;
-    font-size:84%;
-}
-.bg-twitter, .bg-linkedin, .bg-github {
-  background-image: url('../img/css_sprites.png');
-  background-repeat: no-repeat;
-}
-.bg-twitter {
-    display: block;
-    width: 48px; 
-    height: 48px;
-    background-position: -8px -8px;
-}
-.bg-linkedin {
-    display: block;
-    width: 48px;
-    height: 48px;
-    background-position: -72px -8px;
-}
-.bg-github {
-    display: block;
-    width: 48px;
-    height: 48px;
-    background-position: -136px -8px;
-}
+/* MOBILE SETTINGS END */
