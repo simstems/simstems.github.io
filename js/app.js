@@ -39,7 +39,7 @@ $(document).ready(function(){
         var iFrameFormSubject = getiFrameFormSubject();
         iFrameFormSubject.val("Tech Support");
         iFrameFormSubject.attr('readonly', true);
-        iFrameForm.attr('action', 'https://formspree.io/techsupport@simstems.com');
+        iFrameForm.attr('action', 'https://formspree.io/sim@simstems.com');
         scrollDown();
     }); 
     $(".get-quote-consult").click(function(){
@@ -63,7 +63,7 @@ $(document).ready(function(){
         var iFrameForm = getiFrameForm();
         var iFrameFormSubject = getiFrameFormSubject();
         iFrameFormSubject.attr('readonly', false);
-        iFrameForm.attr('action', 'https://formspree.io/contact@simstems.com');
+        iFrameForm.attr('action', 'https://formspree.io/sim@simstems.com');
     });
 });
 

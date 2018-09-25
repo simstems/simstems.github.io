@@ -6,6 +6,7 @@
 }
 body, .top-bar, .top-bar ul, .off-canvas-menu { 
     background: #33cccc;
+    color: #2c3e50;
 }
 .top-bar a, a:hover {
     color: #ecf0f1;
@@ -48,12 +49,19 @@ body, .top-bar, .top-bar ul, .off-canvas-menu {
     margin-top: 1rem;
 }
 .services-row .pricing-table .title {
+    font-size: 26px;
     text-align: center;
     font-weight: bold;
     list-style: none;
+    text-decoration: underline;
 }
 .services-row .pricing-table .description {
     margin-top: 2rem;
+}
+.services-row {
+    font-size: 19px;
+    font-weight: bold;
+    background: no-repeat center/100% url('../img/services.png') !important;
 }
 .button-row .button-table .cta-button {
     text-align: center;
