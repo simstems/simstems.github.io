@@ -61,7 +61,7 @@ body, .top-bar, .top-bar ul, .off-canvas-menu {
 .services-row {
     font-size: 19px;
     font-weight: bold;
-    background: no-repeat center/100% url('../img/services.png') !important;
+    background: no-repeat center/100% url('../img/services.png');
 }
 .button-row .button-table .cta-button {
     text-align: center;
@@ -273,6 +273,9 @@ footer .footer-link-column {
         padding-left: 12px;
         padding-right: 12px;
         margin-top: 1rem;
+    }
+    .service-row {
+        background: none !important;
     }
     footer .brand-logo {
         display: none !important;
