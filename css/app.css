@@ -43,7 +43,7 @@ body, .top-bar, .top-bar ul, .off-canvas-menu {
     border-top-left-radius: 4px;
 }
 .services-row {
-    background: no-repeat center/100% url('../img/services.png');
+    background: no-repeat center/100% url('../img/services.png') !important;
 }
 .pricing-table .cta-button {
     display: none;
@@ -72,7 +72,7 @@ body, .top-bar, .top-bar ul, .off-canvas-menu {
 #contact-title, #about-title {
     cursor: pointer;
 }
-.about-row, .services-row, .mail-row, .about-mail-container {
+.about-row, .services-row, .mail-row, .services-container, .about-mail-container {
     background: #ecf0f1;
 }
 .mail-row {
@@ -188,7 +188,16 @@ footer .footer-link-column {
 }
 /* APP ICONS END */
 /*//---------------------------------------------------------------------------------------//*/
- /* MOBILE SETTINGS START */
+/*////////////////////////////////
+||||||||||||||||||||||||||||||||
+
+| \  / | / |--| \ ||---\ |----| | |     ||----)
+| |\/| | | |  | | ||___/   ||   | |     ||____
+| |  | | | |  | | ||---\   ||   | |___  ||----
+|_|  |_| \_|--|_/ ||___/ |----| |_____| ||____)
+
+||||||||||||||||||||||||||||||||
+///////////////////////////////*/
 @media screen and (max-width: 350px) {
      .off-canvas {
         width: 35%;
@@ -258,6 +267,9 @@ footer .footer-link-column {
     .button-row .button-table .cta-button {
         display: none;
     }
+    .services-row {
+        background: none !important;
+    }
     .mail-row {
          background: none !important;
     }
@@ -275,9 +287,6 @@ footer .footer-link-column {
         padding-left: 12px;
         padding-right: 12px;
         margin-top: 1rem;
-    }
-    .service-row {
-        background: none !important;
     }
     footer .brand-logo {
         display: none !important;
@@ -363,6 +372,9 @@ footer .footer-link-column {
     .top-bar .top-bar-right {
         width: 60% !important;
     }
+    .services-row {
+        background: none !important;
+    }
     .about-row {
          background: none !important;
     }
@@ -382,6 +394,9 @@ footer .footer-link-column {
     }
 } 
 @media screen and (max-width: 1000px) {
+    .services-row {
+        background: none !important;
+    }
     .about-row {
          background: none !important;
     }
@@ -398,6 +413,9 @@ footer .footer-link-column {
     }
 }
 @media screen and (max-width: 1024px) {
+    .services-row {
+        background: none !important;
+    }
     .about-row {
      background: no-repeat center/100% url('../img/about-bg-1.png');
     }
