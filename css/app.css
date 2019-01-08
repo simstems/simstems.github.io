@@ -47,7 +47,7 @@ body {
     border-top-left-radius: 4px;
 }
 .services-row {
-    background: no-repeat center/100% url('../img/services.png') !important;
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), no-repeat center/100% url('../img/services.png') !important
 }
 .pricing-table .cta-button {
     display: none;
