@@ -4,8 +4,12 @@
 .selected {
     text-decoration: underline solid #ecf0f1;
 }
-body, .top-bar, .top-bar ul, .off-canvas-menu { 
-    background: #33cccc;
+body {
+    background: #f1f6f8 !important;
+} 
+
+.top-bar, .top-bar ul, .off-canvas-menu { 
+    background: #2c3e50;
     color: #2c3e50;
 }
 .top-bar a, a:hover {
