@@ -1,0 +1,147 @@
+/*
+
+8888888b.            .d888                  888 888          .d8888b.  888             888          
+888  "Y88b          d88P"                   888 888         d88P  Y88b 888             888          
+888    888          888                     888 888         Y88b.      888             888          
+888    888  .d88b.  888888 8888b.  888  888 888 888888       "Y888b.   888888 888  888 888  .d88b.  
+888    888 d8P  Y8b 888       "88b 888  888 888 888             "Y88b. 888    888  888 888 d8P  Y8b 
+888    888 88888888 888   .d888888 888  888 888 888               "888 888    888  888 888 88888888 
+888  .d88P Y8b.     888   888  888 Y88b 888 888 Y88b.       Y88b  d88P Y88b.  Y88b 888 888 Y8b.     
+8888888P"   "Y8888  888   "Y888888  "Y88888 888  "Y888       "Y8888P"   "Y888  "Y88888 888  "Y8888  
+                                                                                   888              
+                                                                              Y8b d88P              
+                                                                               "Y88P"               
+
+*/
+
+body {
+  font-family: 'Nunito';
+  letter-spacing: 0.0625em;
+}
+
+a:focus, a:hover {
+  text-decoration: none;
+  color: #3c6360;
+}
+
+.img-circle {
+  background-color: azure;
+  vertical-align: middle;
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+}
+
+#about {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.card-body h5 {
+  font-size: 1.5rem;
+  line-height: 4.5rem;
+  letter-spacing: 0.8rem;
+}
+
+.btn {
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  font-family: 'Varela Round';
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+  border: 0;
+}
+
+.github-widget {display: none;}
+
+#app-btn, #project-btn { cursor: pointer; }
+
+footer {
+  color: black;
+  padding: 2rem 0
+}
+
+/*
+
+8888888b.                    888      888                           .d8888b.  888             888          
+888  "Y88b                   888      888                          d88P  Y88b 888             888          
+888    888                   888      888                          Y88b.      888             888          
+888    888  .d88b.  .d8888b  888  888 888888 .d88b.  88888b.        "Y888b.   888888 888  888 888  .d88b.  
+888    888 d8P  Y8b 88K      888 .88P 888   d88""88b 888 "88b          "Y88b. 888    888  888 888 d8P  Y8b 
+888    888 88888888 "Y8888b. 888888K  888   888  888 888  888            "888 888    888  888 888 88888888 
+888  .d88P Y8b.          X88 888 "88b Y88b. Y88..88P 888 d88P      Y88b  d88P Y88b.  Y88b 888 888 Y8b.     
+8888888P"   "Y8888   88888P' 888  888  "Y888 "Y88P"  88888P"        "Y8888P"   "Y888  "Y88888 888  "Y8888  
+                                                     888                                  888              
+                                                     888                             Y8b d88P              
+                                                     888                              "Y88P"               
+
+*/
+
+@media only screen and (min-width: 1080px) {
+
+  body {
+    background-color: #161616;
+  }
+
+  .masthead {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 15rem 0;
+    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/bg-masthead.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  
+  .card {
+    margin: 0 auto;
+    width: 40%;
+  }
+
+  footer {
+    color: white;
+    padding: 5rem 0
+  }
+
+}
+
+/*
+
+
+88888888888       888      888          888          .d8888b.  888             888          
+    888           888      888          888         d88P  Y88b 888             888          
+    888           888      888          888         Y88b.      888             888          
+    888   8888b.  88888b.  888  .d88b.  888888       "Y888b.   888888 888  888 888  .d88b.  
+    888      "88b 888 "88b 888 d8P  Y8b 888             "Y88b. 888    888  888 888 d8P  Y8b 
+    888  .d888888 888  888 888 88888888 888               "888 888    888  888 888 88888888 
+    888  888  888 888 d88P 888 Y8b.     Y88b.       Y88b  d88P Y88b.  Y88b 888 888 Y8b.     
+    888  "Y888888 88888P"  888  "Y8888   "Y888       "Y8888P"   "Y888  "Y88888 888  "Y8888  
+                                                                           888              
+                                                                      Y8b d88P              
+                                                                       "Y88P"               
+
+
+@media only screen and (min-width: 750px) and (max-width: 1030px) and (orientation: portrait) {
+  .card {
+    background-color: rgb(228, 180, 96); 
+  }
+}
+
+
+
+8888888b.          d8b          888          .d8888b.  888             888          
+888   Y88b         Y8P          888         d88P  Y88b 888             888          
+888    888                      888         Y88b.      888             888          
+888   d88P 888d888 888 88888b.  888888       "Y888b.   888888 888  888 888  .d88b.  
+8888888P"  888P"   888 888 "88b 888             "Y88b. 888    888  888 888 d8P  Y8b 
+888        888     888 888  888 888               "888 888    888  888 888 88888888 
+888        888     888 888  888 Y88b.       Y88b  d88P Y88b.  Y88b 888 888 Y8b.     
+888        888     888 888  888  "Y888       "Y8888P"   "Y888  "Y88888 888  "Y8888  
+                                                                   888              
+                                                              Y8b d88P              
+                                                               "Y88P"               
+
+*/
+@media print {  }

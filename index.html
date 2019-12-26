@@ -1,30 +1,101 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
-        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
-        <title> SIMSTEMS </title>
-         <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        .imgbox {
-            display: grid;
-            height: 100%;
-        }
-        .center-fit {
-            max-width: 100%;
-            max-height: 100vh;
-            margin: auto;
-        }
-    </style>
-    </head>
-    
-    <body>
-        <div class="imgbox">
-            <img alt="under construction" class="center-fit" src='under-construction.jpg'>
+<html lang="en">
+<!-- 
+
+  Special thanks to:
+
+  George MacKerron (aka jawj), for the Github widget - https://github.com/jawj/github-widget
+  Interneting is Hard, for how to create a responsive website - https://internetingishard.com/html-and-css/responsive-design/
+  CSS Tricks, for the list of screen sizes - https://css-tricks.com/snippets/css/media-queries-for-standard-devices
+  Patrick Gillespie (aka patorjk) for Text to ASCII Art Generator - http://patorjk.com/software/taag
+  
+-->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" type="image/png" href="./img/icons/ducky-32.png">
+	<link rel="icon" type="image/png" href="./img/icons/ducky-180.png">
+  <title>SIMSTEMS</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Custom fonts for this website -->
+  <script src="https://kit.fontawesome.com/f397dd0462.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this website -->
+  <link href="css/index.css" rel="stylesheet">
+  <link href="./github-widget/github-widget.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body id="page-top">
+  <!-- Main -->
+  <div class="masthead">
+        <div class="card">
+          <div class="card-body" id="card-introduction">
+            <div class="row">
+              <div class="col align-self-center">
+                <center>
+                  <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img name="aboutme" alt="Potrait of Stephen Morrison" class="img-circle" src="https://media.licdn.com/dms/image/C4E03AQHd4fNUeCe27A/profile-displayphoto-shrink_200_200/0?e=1581552000&v=beta&t=gcip-C9E6RL4SdxFDuoI7eHRpDFRKLmBrE3oDYTlspw" onerror="this.onerror=null;this.src='./img/icons/ducky-180.png';"/></a>
+                </center>
+              </div>
+            </div>
+            <h5 class="card-title text-center">SIMSTEMS</h5>
+            <p class="card-text" id="about">Welcome to my little corner of the web. My name is Stephen Morrison. I'm a part-time programmer and a full-time Technical Support Specialist. In my spare time I write programs in python, c++, java, and any other language that I think will best fit the project that I'm working on. Most of my days are spent solving a variety of computer related issues like removing viruses from computers, fixing broken screens, and upgrading hardware. Click on one of the links below to learn more about me or see what I'm working on. </p>
+          </div>
+          <div class="list-group list-group-flush" id="card-link-list">
+            <a href="mailto:sim@simstems.com" class="list-group-item list-group-item-action"><i class="far fa-envelope"></i> sim@simstems.com</a>
+            <a href="https://www.linkedin.com/in/simstems" class="list-group-item list-group-item-action"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/simstems" class="list-group-item list-group-item-action"><i class="fab fa-github-square"></i> Github</a>
+            <a href="https://medium.com/@simstems" class="list-group-item list-group-item-action"><i class="fab fa-medium"></i> Medium</a>
+            <a href="https://twitter.com/simstems" class="list-group-item list-group-item-action"><i class="fab fa-twitter-square"></i> Twitter</a>
+            <a href="https://www.instagram.com/sim_stems/" class="list-group-item list-group-item-action"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="./documents/MorrisonStephen-Resume.pdf" target="_blank" download class="list-group-item list-group-item-action"><i class="far fa-file-pdf"></i> Resum&eacute;</a>
+          </div>
+          <div class="card-body" id="projects">
+            <!-- Fade card on mobile, flip vertically on larger screens to displey git repos -->
+            <a id="project-btn" class="btn btn-lg btn-block text-uppercase" role="button"><i class="fas fa-project-diagram"></i>Projects</a>
+            <div class="github-widget" data-user="simstems"></div>
+          </div>
+          
+          <div class="card-body" id="applications">
+            <!-- Link to web apps and apps download page  -->
+            <a id="app-btn" class="btn btn-lg btn-block text-uppercase" role="button" ><i class="fas fa-th"></i>Apps</a>
+          </div>
+          
         </div>
-    </body>
+  </div>
+
+  <!-- Footer -->
+  <footer class="small text-center">
+    <div class="copyright">
+      Copyright &copy; SIMSTEMS 
+      <script>
+        document.write(new Date().getFullYear())
+      </script>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!-- Jquery JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  
+  <!-- Github Widget Javascript -->
+  <script src="./github-widget/github-widget.min.js"></script>
+
+  <!-- Custom Javascript for this website -->
+  <script src="./js/index.js"></script>
+
+</body>
+
 </html>
